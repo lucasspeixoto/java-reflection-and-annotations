@@ -1,0 +1,284 @@
+2024-02-15 07:33:17.912388-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "Create Table TransactionHistory (\000d\000atransactionId int,\000d\000aaccountNumber int,\000d\000aname varchar(50),\000d\000atransctionType varchar(12)\000d\000a[*]amount int\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+Create Table TransactionHistory (
+transactionId int,
+accountNumber int,
+name varchar(50),
+transctionType varchar(12)
+amount int
+) [42001-224]
+2024-02-15 07:35:49.835816-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TRANSACTIONIDACCOUNTNUMBER" not found; SQL statement:
+insert into TransactionHistory( transactionIdaccountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:59)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 07:38:57.870342-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TRANSACTIONIDTRANSACTIONID" not found; SQL statement:
+insert into TransactionHistory( transactionIdtransactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:60)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 07:46:00.095865-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TRANSACTIONIDACCOUNTNUMBER" not found; SQL statement:
+insert into TransactionHistory( transactionIdaccountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:60)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 07:46:14.429632-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TRANSACTIONIDACCOUNTNUMBER" not found; SQL statement:
+insert into TransactionHistory( transactionIdaccountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:61)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 07:49:26.346990-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TRANSACTIONIDACCOUNTNUMBER" not found; SQL statement:
+insert into TransactionHistory( transactionIdaccountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:61)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 07:49:50.368976-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TRANSACTIONIDACCOUNTNUMBER" not found; SQL statement:
+insert into TransactionHistory( transactionIdaccountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:63)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 07:50:18.124876-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TRANSACTIONIDACCOUNTNUMBER" not found; SQL statement:
+insert into TransactionHistory( transactionIdaccountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:65)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 07:50:57.354763-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TRANSACTIONTYPE" not found; SQL statement:
+insert into TransactionHistory( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:65)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 07:52:00.375494-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]TRANSCATIONTYPE"; expected "TRUNCATE"; SQL statement:
+TRANSCATIONTYPE [42001-224]
+2024-02-15 07:53:44.198087-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSCTIONHISTORY" not found; SQL statement:
+drop table transctionHistory [42102-224]
+2024-02-15 07:53:51.079826-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "Create Table TransactionHistory (\000d\000atransactionId int,\000d\000aaccountNumber int,\000d\000aname varchar(50),\000d\000atransactionType varchar(12),\000d\000aamount int\000d\000a)[*]TRANSACTIONHISTORY"; SQL statement:
+Create Table TransactionHistory (
+transactionId int,
+accountNumber int,
+name varchar(50),
+transactionType varchar(12),
+amount int
+)TRANSACTIONHISTORY [42000-224]
+2024-02-15 07:54:02.942616-03:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/Documents/projects/java/java-reflection-and-annotations/database/practice1.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at com.basicsstrong.practice.Hibernate.<init>(Hibernate.java:28)
+	at com.basicsstrong.practice.Hibernate.getConnection(Hibernate.java:24)
+	at com.basicsstrong.practice.Application.main(Application.java:12)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/Documents/projects/java/java-reflection-and-annotations/database/practice1.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/Documents/projects/java/java-reflection-and-annotations/database/practice1.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-02-15 07:54:56.483872-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+insert into TransactionHistory( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [21002-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:295)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at com.basicsstrong.practice.Hibernate.write(Hibernate.java:59)
+	at com.basicsstrong.practice.Application.main(Application.java:14)
+2024-02-15 08:04:00.453272-03:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/Documents/projects/java/java-reflection-and-annotations/database/practice1.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at com.basicsstrong.practice.Hibernate.<init>(Hibernate.java:28)
+	at com.basicsstrong.practice.Hibernate.getConnection(Hibernate.java:24)
+	at com.basicsstrong.practice.Application.main(Application.java:12)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/Documents/projects/java/java-reflection-and-annotations/database/practice1.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/User/Documents/projects/java/java-reflection-and-annotations/database/practice1.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
